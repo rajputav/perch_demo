@@ -32,9 +32,7 @@ io.on('connection', function (socket) {
       });
       
     socket.on('cursor_data', function (data) {
-        console.log('socketdata', data);
         // add received line to history 
-
         cursorHistory.write(`${JSON.stringify(data)}\n`)
         // send line to all clients
         io.emit('cursor_replay', { cursor: data.cursor, timestamp: data.timestamp });
@@ -43,8 +41,7 @@ io.on('connection', function (socket) {
     socket.on('replay_data', function(data) {
         //read file into a stream buffer ~20 lines, use timestamps to schedule cursor data to be sent x10 speed
         //TODO check socketio latency, will we have to cache cursor data on appB to achieve viewable x10 speed
-    }
-
+    });
 
 });
 
