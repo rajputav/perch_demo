@@ -1,0 +1,22 @@
+* { 
+    margin: 0;
+    padding: 0;
+ }
+ body, html{
+    width: 100%;
+    height: 100%;
+ }
+ #canvas {
+    display: block;
+ }
+
+table, th, td {
+    border: 1px solid black;
+    padding: 3px;
+    font-size: 12px;
+}
+
+table{
+    padding: 4px;
+    margin: 10px;
+}
